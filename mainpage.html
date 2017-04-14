@@ -4,118 +4,159 @@
 
 html {
 	height: 100%;
-	background: -webkit-linear-gradient(orange, red);
+	background: white;}
+
+.topnav{
+	background: white;
+	overflow:hidden;
 }
 
-body {
-	
-	/*background-image:url("/Users/Immanuel/AndroidStudioProjects/Locale/app/src/main/res/drawable/pencil.jpg”);*/
-	//background: -webkit-linear-gradient(orange, red)
-	
-
-}
-		
-p {
+.topnav a{
+	float:left;
+	display:block;
+	color: black;
 	text-align:center;
-	color:white;
-	font-size:25px;
-	margin-top:6cm;
-	font-family:"Avenir Next"
-	
+	padding: 10px;
+	font-size: 15px;
+	font-family:"Avenir Next";
+	font-weight:bold;
+	text-decoration:none;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-	font-family:"Avenir Next";
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: white;
-  background-color:rgb(68,214,44);
-  border: none;
-  border-radius: 15px;
-  //box-shadow: 0 9px #999;
+.topnav a:hover{
+	text-decoration:underline;
+	color:black;
 }
+
+
 
 </style>
 
-<head>
-<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-
-<script>
-
-function initialize(){
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAydccaoiH5yk06fUM6USOF5-Q5lRt2NO8",
-    authDomain: "realnews-ebf35.firebaseapp.com",
-    databaseURL: "https://realnews-ebf35.firebaseio.com",
-    storageBucket: "realnews-ebf35.appspot.com",
-    messagingSenderId: "440201276876"
-  };
-
-  firebase.initializeApp(config);
-
-}
-</script>
-
-<script>
-
- function fb_login(){
-
- initialize();
-
- var provider = new firebase.auth.FacebookAuthProvider();
-
- firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-	alert(user.getUid());
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-
-});
-
-}
-</script>
-
-<script>
-    function LoginPage(){
-      //alert('this one works too!'); 
-      window.location.href = "/Users/Immanuel/Documents/LoginPage.html";
-    }
-</script>
-</head>
-
 <body>
 
-<div style="text-align:center;">
+<div class="topnav" id="myTopnav">
+   	<a href="file:///Users/Immanuel/Documents/opening_page.html" style="margin-left:200px; text-decoration:underline;">Download</a>
+	<a href="file:///Users/Immanuel/Documents/writeforus.html" > Write For Us</a>
+	<a href="file:///Users/Immanuel/Documents/aboutus.html">About Us</a>
+</div> 
 
-<p id="get_the_app"> <strong>Download the App on the Google Play Store </strong> </p>
-<img src="/Users/Immanuel/Desktop/practice_folder/google_play.png" width="300" height="100">
+<div style="background:yellow; height:600px; width:100%; " >
+
+
+
+	<div style="float:left;">
+	        <video height="450" width="250" style="padding-top:50px; padding-bottom:50px; padding-right:10px; padding-left:10px; border:3px solid black; background-color:black; border-top-right-radius:30px; border-top-left-radius:30px; border-bottom-right-radius:30px; border-bottom-left-radius:30px; margin-left:200px; margin-top: 25px;" autoplay controls loop>
+				<source src="/Users/Immanuel/Desktop/VID_20170325_202308.mp4" type="video/mp4"> 
+
+		</video>
+
+
+
+	<div style="float:right; margin-left:100px; margin-top:150px; text-align:center;">
+
+		<div>
+			<p style='font-family:"Avenir Next"; color:black; font-size:30px;'>Download Now</p>
+		</div>
+
+		<div style="float:right;">
+			<img style="width:285px; height:110px;" src="/Users/Immanuel/Desktop/practice_folder/google_play.png">
+		</div>
+
+		<div style="float:right; margin-top:17px;">
+			<img style="width:250px; height:75px;" src="/Users/Immanuel/Documents/apple_download.png">
+		</div>
+
+		
+	</div>
+		
 
 </div>
 
-<div style="text-align:center;">
-<button class="button" onclick="LoginPage()" > <strong>Sign In</strong> </button>
+<div style="padding-top:600px;">
+
+<div style="margin-left:150px; float:left;">
+<p style=" font-family:'Avenir Next'; font-size: 13px; font-weight:bold;"> Company </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> FreeMyNews Inc. </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Jobs </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> News </p>
+
 </div>
+
+
+
+<div style="margin-left:120px; margin-top:1px; float:left;">
+<p style=" font-family:'Avenir Next'; font-size: 13px; font-weight:bold;"> Community </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Support </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Community Guidelines </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Safety Center </p>
+
+</div>
+
+
+
+<div style="margin-left:120px; margin-top:2px; float:left;">
+<p style=" font-family:'Avenir Next'; font-size: 13px; font-weight:bold;"> Business </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Advertising </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Advertising Policy </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Inquiries </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Brand Guidelines </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Promotion Rules </p>
+
+</div>
+
+<div style="margin-left:120px; margin-top:1px; float:left;">
+<p style=" font-family:'Avenir Next'; font-size: 13px; font-weight:bold;"> Legal </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Privacy Center </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Cookie Policy </p>
+
+<p style=" font-family:'Avenir Next'; font-size: 13px; color:grey;"> Copyright </p>
+
+</div>
+
+
+</div>
+
+<div style="margin-top:250px; height:50px; background:black;">
+<div style="float:left;">
+<p style="font-family:'Avenir Next'; font-size: 13px; margin-left:150px; color:white;">Privacy Policy </p>
+</div>
+
+<div style="float:left;">
+
+<p style="font-family:'Avenir Next'; font-size: 13px; margin-left:50px; color:white;">Terms of Service </p>
+
+</div>
+
+
+</div>
+	
+	</div>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
 
 </html>
-
